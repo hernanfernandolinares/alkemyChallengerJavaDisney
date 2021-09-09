@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "5d12b6cc-b8f0-4101-93af-e75e82dd64cc",
+		"name": "Disney",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Personaje",
+			"item": [
+				{
+					"name": "crearPersonaje",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\":\"romeoSantos\",\n    \"pass\":12345,\n    \"nombre\":\"romeo\",\n    \"edad\":35,\n    \"peso\": 70,\n    \"historia\":\"cantante musical de bachata\"   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characters",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerTodosLosPersonajes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/characters",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerPersonajePorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/characters/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarPersonajePorId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/characters/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "modificarPersonajePorId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\":\"pepea\",\n    \"pass\":12345,\n    \"nombre\":\"romeo\",\n    \"edad\":35,\n    \"peso\": 70,\n    \"historia\":\"cantante musical de bachata\"   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/characters/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bucarPersonajePorNombre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/characters?nombre=w",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "w"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bucarPersonajePorEdad",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/characters?nombre=w",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"characters"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "w"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
